@@ -29,3 +29,30 @@ amount_paid = float(input("Enter the amount paid by the customer: "))
 def calculate_change(amount_paid, total_cost):
     change = amount_paid - total_cost
     return change
+
+# Part 9: Call calculate_change and store the value it returns
+change_due = calculate_change(amount_paid, total_cost_rounded)
+rounded_change = round(change_due,2)
+
+# Part 10: Define a function that returns a thank you message based on cups sold
+def thank_you_message(cups):
+    if cups > 5:
+        return "WOW , Big Order Thank You"
+    else:
+        return "Thanks For Stoping By The Stand"
+
+#  Part 11: Call Thank_you_message and store the value it returns
+closing_message = thank_you_message(cups_sold)
+
+
+# Part 12: print the Receipt
+
+print("")
+print("==== LEMONADE STAND RECEIPT ====")
+print("Price Per Cup:",price_per_cup)
+print("Cups Sold:",cups_sold)
+print("Total Cost:",total_cost_rounded)
+print("Amount Paid:" , amount_paid)
+print("Change due: " , rounded_change)
+print(closing_message)
+print("================================")
